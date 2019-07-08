@@ -1,0 +1,41 @@
+loginmemory = "kerem" #kullanıcı adımızı belirledik
+loginpassmemory = "123456"  #kullanıcı şifremizi belirledik
+hak = 3
+print("""
+************************************************
+*           Güvenlik Arayüzü V.2               *
+*                                              *    
+*                                              *           
+* Güvenlik Arayüzü sistemimize hoş geldiniz    *
+* Giriş için 3 hakkınız vardır!                *
+* Sistem KEREM ÖZDEMİR tarafından tasarlandı   *
+* Bu yazılım MIT LICENSE tarafından korunuyor! * 
+*                                              * 
+*            Powered BY. Kerem ÖZDEMİR          * 
+*                                              *
+*                                              *
+************************************************
+
+
+
+
+
+""")
+while True:
+    login = input("Kullanıcı adını giriniz ")
+    loginpass = input("Şifreyi giriniz")
+    if (login != loginmemory and loginpass == loginpassmemory):
+        hak -= 1
+        print("kullanıcı adınız yanlış. Son deneme ", hak , "hakkınız kaldı")
+    elif (login == loginmemory and loginpass != loginpassmemory):
+        hak -= 1
+        print("kullanıcı şifreniz yanlış. Son deneme", hak ," hakkınız kaldı")
+    elif (login != loginmemory and loginpass != loginpassmemory):
+        hak -= 1
+        print("kullanıcı adınız yanlış. Son deneme ", hak ,"hakkınız kaldı")
+    else:
+        print("Giriş kabul edildi HOŞGELDİNİZ :)")
+        break
+    if (hak == 0):
+        print("Deneme hakkınız bitmiştir. Sistemden engellendiniz!!")
+        break
